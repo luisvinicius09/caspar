@@ -1,4 +1,5 @@
 import { McLaren } from 'next/font/google';
+import Link from 'next/link';
 
 const mclaren = McLaren({ weight: '400', subsets: ['latin'] });
 
@@ -15,8 +16,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 				</div>
 
 				<div className='bg-background grow rounded-t-[100px] mx-6 z-10 shadow-lg'>
-					<div className='flex pt-20 px-20 h-full'>
-						<div className='bg-secondary/70 py-4 text-xl rounded-xl px-4 max-h-[36rem] max-w-64 shadow-lg mr-12'>
+					{/* <div className='flex pt-20 px-20 h-full gap-12'> */}
+					<div className='grid 2xl:grid-cols-8 grid-cols-12 pt-20 px-20 h-full 2xl:gap-12 xl:gap-8'>
+						<div className='2xl:col-span-2 xl:col-span-3 lg:col-span-4 col-span-5 xl:mr-0 mr-8 bg-secondary/70 py-4 text-xl rounded-xl px-4 max-h-[36rem] max-w-64 shadow-lg'>
 							<div className='pl-8 my-2'>
 								<p className='pt-2'>Menu</p>
 							</div>
@@ -25,44 +27,46 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
 							<div className=''>
 								<div className='py-2 pl-4 my-2 rounded-xl bg-secondary'>
-									<a href='#'>
+									<Link href='/dashboard'>
 										<div className='flex'>
 											<p className='text-accent'>icon</p>
 											<p className='opacity-100'>Inicio</p>
 										</div>
-									</a>
+									</Link>
 								</div>
 
 								<div className='py-2 pl-4 my-2 rounded-xl'>
-									<a href='#'>
+									<Link href='/charges'>
 										<div className='flex'>
 											<p className='text-accent'>icon</p>
 											<p className='opacity-60'>Cobranças</p>
 										</div>
-									</a>
+									</Link>
 								</div>
 
 								<div className='py-2 pl-4 my-2 rounded-xl'>
-									<a href='#'>
+									<Link href='/clients'>
 										<div className='flex'>
 											<p className='text-accent'>icon</p>
 											<p className='opacity-60'>Clientes</p>
 										</div>
-									</a>
+									</Link>
 								</div>
 
 								<div className='py-2 pl-4 my-2 rounded-xl'>
-									<a href='#'>
+									<Link href='/settings'>
 										<div className='flex'>
 											<p className='text-accent'>icon</p>
 											<p className='opacity-60'>Configurações</p>
 										</div>
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
 
-						<main className='w-full'>{children}</main>
+						<main className='2xl:col-span-6 xl:col-span-9 lg:col-span-8 col-span-7 w-full'>
+							{children}
+						</main>
 					</div>
 				</div>
 			</div>

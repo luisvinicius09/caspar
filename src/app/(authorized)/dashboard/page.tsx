@@ -1,24 +1,24 @@
-const infoBoxStyle = 'bg-secondary/70 pr-24 rounded-xl p-4';
+const infoBoxStyle = 'bg-secondary/70 rounded-xl p-4';
 
 export default function Dashboard() {
 	return (
 		<>
 			<div>
-				<div className='flex justify-between'>
+				<div className='flex justify-between flex-wrap'>
 					<div className={`${infoBoxStyle}`}>
-						<p>box</p>
+						<p>Disponivel para Saque</p>
 						<p>box</p>
 						<p>box</p>
 					</div>
 
 					<div className={`${infoBoxStyle}`}>
-						<p>box</p>
+						<p>Em Analise</p>
 						<p>box</p>
 						<p>box</p>
 					</div>
 
 					<div className={`${infoBoxStyle}`}>
-						<p>box</p>
+						<p>Reserva Financeira</p>
 						<p>box</p>
 						<p>box</p>
 					</div>
