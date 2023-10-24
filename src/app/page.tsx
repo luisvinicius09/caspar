@@ -1,14 +1,10 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { StoreInitializer } from '@/components/StoreInitializer';
+import { authStore } from './authStore';
 
 export default function Home() {
-	const router = useRouter();
-
-	useEffect(() => {
-		router.push('/login');
-	}, [router]);
-
-	return <div></div>;
+	return (
+		<>
+			<StoreInitializer {...authStore.getState()}/>
+		</>
+	);
 }
